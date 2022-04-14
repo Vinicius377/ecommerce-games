@@ -10,7 +10,7 @@ function increment(id: number) {
 }
 function decrement(id: number) {
   return {
-    types: types.DECREMENT,
+    type: types.DECREMENT,
     payload: {
       id,
     },
