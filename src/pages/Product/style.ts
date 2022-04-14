@@ -5,10 +5,46 @@ export const Container = styled.section`
   display: flex;
   box-shadow: -5px 5px 8px 0 rgba(256, 256, 256, 0.4);
   padding: 40px;
-  img {
+  .img-game {
     padding: 20px;
     box-shadow: -7px 7px 12px 0 rgba(0, 0, 0, 0.4);
   }
-  .informations {
+  .infor-container {
+    margin-inline: 40px;
+    width: 100%;
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  .infor-price {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  .infor-div {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+   
+    button{
+        cursor:pointer;
+        background-color:#FF965A;
+        border:solid 0.2px black;
+        border-radius:15px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        padding:5px;
+        font-size:1.1rem;
+        font-weight:500;
+        flex:4 ;
+        :hover{
+            background:#ffffff;
+            border:solid 1px #FF965A;
+        }
   }
 `
