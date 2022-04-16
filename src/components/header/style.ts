@@ -8,7 +8,6 @@ export const Container = styled.header`
   justify-content: space-between;
   padding-inline: 100px;
   a {
-    margin-inline: 10px;
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
@@ -74,6 +73,43 @@ export const Container = styled.header`
     position: absolute;
     left: 0;
     z-index: 100;
-    top: 50px;
+    top: 40px;
+  }
+`
+
+interface MenuBar {
+  active?: boolean
+}
+export const MenuBar = styled.div.attrs(() => ({
+  role: "menubar",
+}))`
+  width: 35px;
+  height: 4px;
+  background: black;
+  position: relative;
+  ${(props: MenuBar) => props.active && "transform: rotate(45deg);"}
+  transition: 0.7s;
+  :before {
+    ${(props: MenuBar) => props.active && "opacity:0;"}
+    content: "";
+    position: absolute;
+    transition: 0.7s;
+    top: 5px;
+    display: block;
+    width: 35px;
+    height: 4px;
+    background: black;
+  }
+  :after {
+    content: "";
+    transition: 0.7s;
+    position: absolute;
+    bottom: 5px;
+    display: block;
+    ${(props: MenuBar) =>
+      props.active && "transform: rotate(90deg) translatex(5px);"}
+    width: 35px;
+    height: 4px;
+    background: black;
   }
 `

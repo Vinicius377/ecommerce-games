@@ -1,27 +1,53 @@
+import { useContext } from "react"
+import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
+
 import { Container } from "./style"
-import img from "../../assets/terra-media-sombras-de-mordor.png"
-import cartIcon from "../../assets/cart-icon.svg"
+import cart_add_icon from "../../assets/cart-add-icon.svg"
+
 import Product from "../../types/product.t"
+import { increment } from "../../context/Cart-Context/actions"
+import cartContext from "../../context/Cart-Context"
+import ProductContext from "../../context/Products-Context"
 
 interface Props {
   product: Product
 }
 
 function ItemProduct({ product }: Props) {
-  const formatedPrice = product.price
+  const { dispatchCartCheckout } = useContext(cartContext)
+  const products = useContext(ProductContext)
+  const navigate = useNavigate()
+
+  const addItemOnCart = (id: number) => {
+    if (dispatchCartCheckout) {
+      dispatchCartCheckout(increment(id))
+      toast.success(
+        `${
+          products.find(product => product.id === id)?.name
+        } foi adicionado ao carrinho!`
+      )
+    }
+  }
+
   return (
-    <Container>
+    <Container role="listitem">
       <img src={`/photos/${product.image}`} width="200" />
-      <div className="infor">
-        <h1>{product.name}</h1>
-        <div className="infor-price">
-          <h2>R$ {formatedPrice}</h2>
+      <div className="infor-container">
+        <h1
+          className="infor-name"
+          onClick={() => navigate(`/product/${product.id}`)}
+        >
+          {product.name}
+        </h1>
+        <div>
+          <h2>R$ {product.price.toFixed(2)}</h2>
           <span>
             <span className="score-title">Score</span> {product.score}
           </span>
         </div>
-        <button>
-          Adicionar <img src={cartIcon} alt="cart-icon" width="32" />
+        <button onClick={() => addItemOnCart(product.id)}>
+          Adicionar <img src={cart_add_icon} alt="cart-icon" width="32" />
         </button>
       </div>
     </Container>

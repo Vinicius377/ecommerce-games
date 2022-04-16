@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.tr`
-  background: #ffffff;
-
+  background: #d2d7d8;
+  color: #000000;
   td {
     padding: 10px 15px;
   }

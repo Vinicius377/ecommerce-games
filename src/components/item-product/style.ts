@@ -4,14 +4,23 @@ export const Container = style.div`
     padding:10px;
     display:flex;
     border-radius:0 10px 10px 10px;
-    box-shadow:-4px 4px 7px 0 rgba(0,0,0,0.4);
-    background:#ffffff;
-    .infor{
+    box-shadow:-5px 5px 3px 0 rgba(256,256,256,0.4);
+    background:#FFFFFF;
+    transition:0.3s;
+    :hover{
+        transform:scale(1.01)
+    } 
+    .infor-container{
         display:flex;
         flex-direction:column;
         margin-block:10px;
         justify-content:space-between;
         width:100%;
+    }
+    .infor-name:hover{
+        -webkit-text-stroke: 0.2px black;
+        color: #51e7f6;
+        cursor:pointer;
     }
     button{
         cursor:pointer;
