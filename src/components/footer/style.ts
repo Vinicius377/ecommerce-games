@@ -2,8 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.footer`
   background-color: #d2d7d8;
-  bottom: 0;
-  position: fixed;
+  align-self: end;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -27,5 +26,8 @@ export const Container = styled.footer`
     flex-direction: column;
     align-items: center;
     gap: 4px;
+  }
+  .footer-company {
+    font-size: 1.2rem;
   }
 `

@@ -12,7 +12,11 @@ function Footer() {
       <div className="footer-middle">
         <span>
           E-commerce criado como proposta de desafio feito pela empresa{" "}
-          <a href="https://www.supera.com.br/" target="_blank">
+          <a
+            href="https://www.supera.com.br/"
+            target="_blank"
+            className="footer-company"
+          >
             Supera Inovação em Tecnologia
           </a>
         </span>

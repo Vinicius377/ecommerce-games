@@ -7,8 +7,10 @@ export const Global = createGlobalStyle`
     box-sizing:border-box;
     }
     body{
-        background:#EAEAEA;
-        min-height:100vh;
+        background-color:#05121A;
+    
         margin:0;
+        overflow-x:hidden;
+
     }
 `
