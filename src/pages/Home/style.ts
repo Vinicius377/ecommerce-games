@@ -44,6 +44,10 @@ export const Container = styled.section`
     border-radius:50%;
     cursor:pointer ;
     position:relative ;
+    :hover{
+     
+      background-color:#d2d7d8;
+    }
   }
   .filter-container_show.filter-container{
     display: block ;
@@ -61,7 +65,7 @@ export const Container = styled.section`
           z-index:100;
           background-color:#05121A;
           left:0; 
-          top:140px; 
+          top:130px; 
           margin:0;
           padding-inline:20px;
         }
