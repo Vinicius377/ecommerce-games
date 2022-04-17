@@ -4,7 +4,7 @@ import { useContext } from "react"
 import CartContext from "../../context/Cart-Context"
 
 function Checkout() {
-  const { cartCheckout, total } = useContext(CartContext)
+  const { cart, total } = useContext(CartContext)
 
   return (
     <Container>
@@ -18,8 +18,8 @@ function Checkout() {
           </tr>
         </thead>
         <tbody>
-          {cartCheckout &&
-            cartCheckout.map(item => (
+          {cart &&
+            cart.map(item => (
               <ItemCheckout informations={item} key={item.id} />
             ))}
           <tr className="subtotal">

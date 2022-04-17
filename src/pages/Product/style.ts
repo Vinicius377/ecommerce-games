@@ -17,6 +17,11 @@ export const Container = styled.section`
     h1 {
       font-size: 2.2rem;
     }
+    .describe-container{
+    background-color:#D2D7D8;
+    margin-inline:10px;
+    padding:10px;
+  }
   }
   .infor-price {
     display: flex;
@@ -49,4 +54,5 @@ export const Container = styled.section`
             border:solid 1px #FF965A;
         }
   }
+ 
 `

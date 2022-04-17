@@ -32,6 +32,6 @@ export const Container = styled.section`
     :disabled{
       background-color: #ffffff;
       border: solid 1px #ff965a;
-
+      cursor:auto;
     }
 `

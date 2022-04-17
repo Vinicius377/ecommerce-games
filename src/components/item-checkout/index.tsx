@@ -18,18 +18,18 @@ interface Props {
 }
 function ItemCheckout({ informations }: Props) {
   const products = useContext(ProductsContext)
-  const { dispatchCartCheckout, cartCheckout } = useContext(CartContext)
+  const { dispatchCart, cart } = useContext(CartContext)
   const productById = products.find(product => product.id === informations.id)
 
   const addItem = (id: number) => {
-    if (dispatchCartCheckout) {
-      dispatchCartCheckout(increment(id))
+    if (dispatchCart) {
+      dispatchCart(increment(id))
     }
   }
   const removeItem = (id: number) => {
-    if (dispatchCartCheckout) {
-      dispatchCartCheckout(decrement(id))
-      if (cartCheckout?.find(item => item.id == informations.id)?.count === 0) {
+    if (dispatchCart) {
+      dispatchCart(decrement(id))
+      if (cart?.find(item => item.id === informations.id)?.count === 0) {
         toast.error(
           `${
             products.find(product => product.id === id)?.name
@@ -39,7 +39,7 @@ function ItemCheckout({ informations }: Props) {
     }
   }
   const remove_item_icon =
-    cartCheckout?.find(item => item.id == informations.id)?.count === 0
+    cart?.find(item => item.id == informations.id)?.count === 0
       ? trash_icon
       : less_icon
 
@@ -51,10 +51,10 @@ function ItemCheckout({ informations }: Props) {
       <td>{informations.count}x</td>
       <td className="buttons-operator">
         <button onClick={() => addItem(informations.id)}>
-          <img src={plus_icon} width={23}></img>
+          <img src={plus_icon} width={23} alt="icone de adicionar"></img>
         </button>
         <button onClick={() => removeItem(informations.id)}>
-          <img src={remove_item_icon} width={23}></img>
+          <img src={remove_item_icon} width={23} alt="icone de remover"></img>
         </button>
       </td>
     </Container>

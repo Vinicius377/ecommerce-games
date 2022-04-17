@@ -8,6 +8,7 @@ import Home from "./pages/Home"
 import Product from "./pages/Product"
 import Login from "./pages/Login"
 import Footer from "./components/footer"
+import SignIn from "./pages/SignIn"
 import { Main, Container } from "./style/App.style"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="/login" element={<Login />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/checkout" element={<Checkout />} />

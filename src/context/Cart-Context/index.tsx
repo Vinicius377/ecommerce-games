@@ -22,28 +22,25 @@ interface Action {
   }
 }
 interface Context {
-  cartCheckout?: CartCheckout[]
-  dispatchCartCheckout?: Dispatch<Action>
+  cart?: CartCheckout[]
+  dispatchCart?: Dispatch<Action>
   total?: number
 }
 
 const CartContext = createContext<Context>({})
 
 function CartContextProvider({ children }: Props) {
-  const [cartCheckout, dispatchCartCheckout] = useReducer(CartReduce, [
-    { count: 0, id: 0 },
-  ])
+  const [cart, dispatchCart] = useReducer(CartReduce, [])
   const [total, setTotal] = useState(0)
   const products = useContext(ProductsContext)
 
   useEffect(() => {
     setTotal(() => {
       let incrementedValue = 0
-      cartCheckout.forEach(item => {
+      cart.forEach(item => {
         const productById = products.findIndex(
           product => product.id === item.id
         )
-
         if (productById === -1) {
           return
         }
@@ -52,10 +49,10 @@ function CartContextProvider({ children }: Props) {
       })
       return incrementedValue
     })
-  }, [cartCheckout])
+  }, [cart])
 
   return (
-    <CartContext.Provider value={{ total, cartCheckout, dispatchCartCheckout }}>
+    <CartContext.Provider value={{ total, cart, dispatchCart }}>
       {children}
     </CartContext.Provider>
   )

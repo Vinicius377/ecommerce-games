@@ -13,7 +13,7 @@ const CartReduce: Reducer<CartCheckout[], Action> = (
   state: CartCheckout[],
   action: Action
 ) => {
-  let indexById = state.findIndex(product => product.id == action.payload.id)
+  let indexById = state.findIndex(product => product.id === action.payload.id)
   let countValue = 0
 
   if (indexById !== -1) {
@@ -23,7 +23,6 @@ const CartReduce: Reducer<CartCheckout[], Action> = (
   }
 
   let newArrCart = [...state]
-
   switch (action.type) {
     case types.INCREMENT:
       newArrCart[indexById] = { id: action.payload.id, count: countValue + 1 }

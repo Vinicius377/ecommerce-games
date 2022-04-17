@@ -7,6 +7,22 @@ export const Container = styled.section`
     padding-inline: 40px;
     margin-block: 10px;
     justify-content: space-evenly;
+    button {
+      font-size: 1.4rem;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      :hover {
+        backdrop-filter: brightness(0.7);
+      }
+    }
+  }
+  @media (max-width: 770px) {
+     {
+      display: none;
+    }
   }
 `
 
@@ -47,11 +63,5 @@ export const CarrouselContainer = styled.div`
     width: 100%;
     color: #ffffff;
     background: linear-gradient(transparent, black);
-  }
-
-  @media (max-width: 770px) {
-     {
-      display: none;
-    }
   }
 `

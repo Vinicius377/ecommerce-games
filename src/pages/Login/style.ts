@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.form`
   background: #ffffff;
   padding: 23px;
-  width: 70%;
+  width: 60%;
   margin-inline: auto;
   border-radius: 10px;
   box-shadow: -5px 5px 7px 0 rgba(256, 256, 256, 0.4);
@@ -35,6 +35,22 @@ export const Container = styled.form`
       :hover {
         background-color: #ffffff;
         border: solid 0.5px #54baf3;
+      }
+    }
+  }
+  .spans-container{
+    display:flex ;
+    flex-direction:column;
+    gap:5px;
+    span{
+      font-size:1.02rem;
+      opacity:0.75 ;
+    }
+    a{
+      color:#54baf3;
+      text-decoration:none;
+      :hover{
+        border-bottom:solid 0.5px #54baf3;
       }
     }
   }

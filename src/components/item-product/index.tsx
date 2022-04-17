@@ -15,13 +15,13 @@ interface Props {
 }
 
 function ItemProduct({ product }: Props) {
-  const { dispatchCartCheckout } = useContext(cartContext)
+  const { dispatchCart } = useContext(cartContext)
   const products = useContext(ProductContext)
   const navigate = useNavigate()
 
   const addItemOnCart = (id: number) => {
-    if (dispatchCartCheckout) {
-      dispatchCartCheckout(increment(id))
+    if (dispatchCart) {
+      dispatchCart(increment(id))
       toast.success(
         `${
           products.find(product => product.id === id)?.name
@@ -36,6 +36,7 @@ function ItemProduct({ product }: Props) {
         src={`/photos/${product.image}`}
         width="200"
         className="ilustration"
+        alt="ilustração do jogo"
       />
       <div className="infor-container">
         <h1

@@ -170,6 +170,7 @@ nav {
     grid-column: 2/3;
   }
   .account-modal {
+    
     height: 100vh;
     width: 100vw;
   }
@@ -180,7 +181,7 @@ nav {
 `
 )
 
-interface MenuHamb {
+interface MenuHambProps {
   active?: boolean
 }
 export const MenuHamb = styled.div.attrs(() => ({
@@ -190,10 +191,10 @@ export const MenuHamb = styled.div.attrs(() => ({
   height: 4px;
   background: black;
   position: relative;
-  ${(props: MenuHamb) => props.active && "transform: rotate(45deg);"}
+  ${(props: MenuHambProps) => props.active && "transform: rotate(45deg);"}
   transition: 0.3s;
   :before {
-    ${(props: MenuHamb) => props.active && "opacity:0;"}
+    ${(props: MenuHambProps) => props.active && "opacity:0;"}
     content: "";
     position: absolute;
     transition: 0.3s;
@@ -209,7 +210,7 @@ export const MenuHamb = styled.div.attrs(() => ({
     position: absolute;
     bottom: 8px;
     display: block;
-    ${(props: MenuHamb) =>
+    ${(props: MenuHambProps) =>
       props.active && "transform: rotate(90deg) translatex(8px);"}
     width: 35px;
     height: 4px;

@@ -16,6 +16,7 @@ function Header() {
   const [showMenu, setShowMenu] = useState(true)
 
   const onNavigate = () => {
+    setShowMenu(false)
     navigate("/checkout")
   }
   return (
@@ -28,10 +29,14 @@ function Header() {
       </div>
 
       <nav role="menu">
-        <NavLink to="/" role="menuitem">
+        <NavLink to="/" role="menuitem" onClick={() => setShowMenu(false)}>
           Home
         </NavLink>
-        <NavLink to="/checkout" role="menuitem">
+        <NavLink
+          to="/checkout"
+          role="menuitem"
+          onClick={() => setShowMenu(false)}
+        >
           Checkout
         </NavLink>
         <div className="subtotal-container" onClick={onNavigate}>
@@ -52,9 +57,13 @@ function Header() {
         <img src={arrow_down} alt="flecha para baixo" />
         <img src={account_img} alt="imagem padrão de perfil" width={40} />
         <div className="account-modal">
-          <Link to="/login">Fazer login </Link>
+          <Link to="/login" onClick={() => setShowMenu(false)}>
+            Fazer login{" "}
+          </Link>
           <span>ou</span>
-          <Link to="/signin">Criar uma conta</Link>
+          <Link to="/signin" onClick={() => setShowMenu(false)}>
+            Criar uma conta
+          </Link>
         </div>
       </div>
     </Container>
