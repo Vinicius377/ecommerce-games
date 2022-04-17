@@ -6,6 +6,7 @@ import CartContext from "../../context/Cart-Context"
 import { increment } from "../../context/Cart-Context/actions"
 import { Container } from "./style"
 import cart_add_icon from "../../assets/cart-add-icon.svg"
+import NotFound from "../../components/notfound-product"
 
 function Product() {
   const { id } = useParams()
@@ -43,7 +44,7 @@ function Product() {
       </div>
     </Container>
   ) : (
-    <h1>Desculpe mas o produto não existe!</h1>
+    <NotFound />
   )
 }
 

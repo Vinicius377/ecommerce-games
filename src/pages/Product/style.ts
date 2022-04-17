@@ -8,6 +8,8 @@ export const Container = styled.section`
   .img-game {
     padding: 20px;
     box-shadow: -7px 7px 12px 0 rgba(0, 0, 0, 0.4);
+    border:solid 0.2px rgba(0,0,0,0.2);
+    border-radius:8px;
   }
   .infor-container {
     margin-inline: 40px;
