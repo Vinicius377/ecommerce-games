@@ -32,7 +32,11 @@ function ItemProduct({ product }: Props) {
 
   return (
     <Container role="listitem">
-      <img src={`/photos/${product.image}`} width="200" />
+      <img
+        src={`/photos/${product.image}`}
+        width="200"
+        className="ilustration"
+      />
       <div className="infor-container">
         <h1
           className="infor-name"

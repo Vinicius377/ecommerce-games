@@ -37,4 +37,40 @@ export const Container = styled.section`
       }
     }
   }
+  .filter-icon{
+    display:none ;
+    background-color:#ffffff;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer ;
+    position:relative ;
+  }
+  .filter-container_show.filter-container{
+    display: block ;
+  }
+  ..filter-container_hide.filter-container{
+    display:none;
+  }
+  /* Media Queries */
+  @media(max-width:563px){
+        .filter-container{
+          display:none ;
+          position:absolute ;
+          width:100vw ;
+          min-height: 100vh;
+          z-index:100;
+          background-color:#05121A;
+          left:0; 
+          top:140px; 
+          margin:0;
+          padding-inline:20px;
+        }
+        .filter-icon{
+          display:block;
+        }
+        {
+          flex-direction:column;
+          gap:10px
+        }
+      }
 `

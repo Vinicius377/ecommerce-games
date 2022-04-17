@@ -2,10 +2,28 @@ import ItensList from "../../components/itens-list"
 import filters from "./FILTER_OPTIONS"
 import { Container } from "./style"
 
+import filter_icon from "../../assets/filters_icon.svg"
+import { useState } from "react"
+
 function Home() {
+  const [showFilters, setShowFilters] = useState(true)
+  function onShowFilters() {
+    setShowFilters(prevSate => !prevSate)
+  }
   return (
     <Container>
-      <section className="filter-container">
+      <img
+        src={filter_icon}
+        alt="icone de filtro"
+        className="filter-icon"
+        onClick={onShowFilters}
+        width="50"
+      />
+      <section
+        className={`filter-container ${
+          showFilters ? "filter-container_show" : "filter-container_hide"
+        } `}
+      >
         {filters.map(filter => (
           <fieldset>
             <legend>{filter.title}</legend>

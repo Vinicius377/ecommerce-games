@@ -11,11 +11,11 @@ const animation = keyframes`
     }
     
 `
-export const Container = style.div`
+export const Container = style.section`
     display:grid;
     opacity:0;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    flex:1;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
     gap:20px;
     animation:${animation} 1s 0.5s forwards;
 `

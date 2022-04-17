@@ -1,6 +1,6 @@
 import style from "styled-components"
 
-export const Container = style.div`
+export const Container = style.section`
     padding:10px;
     display:flex;
     border-radius:0 10px 10px 10px;
@@ -8,12 +8,21 @@ export const Container = style.div`
     background:#FFFFFF;
     transition:0.3s;
     :hover{
-        transform:scale(1.01)
-    } 
+        transform:scale(1.03)
+    }
+    h1{
+        font-size:1.4rem;
+    }
+    .ilustration{
+        padding:5px;
+        border-radius:8px;
+        border:solid 0.5px rgba(0,0,0,0.5);
+    }
+
     .infor-container{
+        padding:10px;
         display:flex;
         flex-direction:column;
-        margin-block:10px;
         justify-content:space-between;
         width:100%;
     }
@@ -32,8 +41,8 @@ export const Container = style.div`
         justify-content:center;
         gap:5px;
         padding:4px;
-        font-size:1.1rem;
-        font-weight:500;
+        font-size:1.01rem;
+        font-weight:600;
     
         :hover{
             background:#ffffff;
@@ -44,5 +53,29 @@ export const Container = style.div`
         font-weight:bold;
         font-size:1.05rem;
     }
-   
+//    Media querys
+@media(max-width:1075px) and (min-width:1018px){
+    {
+        font-size:0.9em;
+    }
+    h1{
+        font-size:1.3em;
+    }
+}
+@media(max-width:670px){
+    .ilustration{
+        width:40%;
+    }
+    {
+        font-size:0.8em;
+    }
+    h1{
+        font-size:1.3rem;
+    }
+}
+@media(max-width:420px){
+    button{
+        font-size:1.1em;
+    }
+}
 `
