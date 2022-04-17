@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 
-import { Container, MenuBar } from "./style"
+import { Container } from "./style"
 import CartContext from "../../context/Cart-Context"
 
 import acount_img from "../../assets/account_avatar.svg"
@@ -15,7 +15,6 @@ function Header() {
   const navigate = useNavigate()
   return (
     <Container>
-      <MenuBar active={true} />
       <nav role="menu">
         <NavLink to="/" role="menuitem">
           Home
@@ -44,7 +43,8 @@ function Header() {
         <img src={acount_img} alt="imagem padrão de perfil" width={40} />
         <div className="account-modal">
           <Link to="/login">Fazer login </Link>
-          {/* <Link>Cadastrar</Link> */}
+          <span>ou</span>
+          <Link to="/signin">Cadastrar</Link>
         </div>
       </div>
     </Container>

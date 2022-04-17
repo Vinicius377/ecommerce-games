@@ -10,4 +10,9 @@ display:flex;
 flex-direction:column;
 align-items:center;
 min-height:100vh;
+@media(max-width:960px){
+    {
+        font-size:0.95em;
+    }
+}
 `

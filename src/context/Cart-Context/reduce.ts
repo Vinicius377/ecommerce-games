@@ -8,10 +8,6 @@ interface Action {
     id: number
   }
 }
-interface State {
-  id: number
-  count: number
-}
 
 const CartReduce: Reducer<CartCheckout[], Action> = (
   state: CartCheckout[],
