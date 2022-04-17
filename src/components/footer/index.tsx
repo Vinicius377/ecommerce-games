@@ -20,7 +20,12 @@ function Footer() {
             Supera Inovação em Tecnologia
           </a>
         </span>
-        <a>Link do repositório</a>
+        <a
+          href="https://github.com/Vinicius377/ecommerce-games"
+          target="_blank"
+        >
+          Link do repositório
+        </a>
       </div>
       <span className="footer-mesage">Me contrata Supera💛</span>
     </Container>

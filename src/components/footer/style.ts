@@ -30,4 +30,11 @@ export const Container = styled.footer`
   .footer-company {
     font-size: 1.2rem;
   }
+  @media (max-width: 970px) {
+     {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 10px;
+    }
+  }
 `
