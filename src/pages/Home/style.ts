@@ -21,5 +21,20 @@ export const Container = styled.section`
     input {
       margin-right: 5px;
     }
+    
+  }
+  .filter-button{
+    font-size: 1.05rem;
+      padding: 10px;
+      cursor:pointer;
+      font-weight:500;
+      border-radius: 8px;
+      background-color: #54baf3;
+      border: solid 0.5px transparent;
+      :hover {
+        background-color: #ffffff;
+        border: solid 0.5px #54baf3;
+      }
+    }
   }
 `

@@ -17,6 +17,7 @@ function Home() {
             ))}
           </fieldset>
         ))}
+        <button className="filter-button">Aplicar</button>
       </section>
       <ItensList />
     </Container>
