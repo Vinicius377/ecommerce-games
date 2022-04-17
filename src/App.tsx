@@ -7,12 +7,14 @@ import Checkout from "./pages/Checkout"
 import Home from "./pages/Home"
 import Product from "./pages/Product"
 import Login from "./pages/Login"
+import Footer from "./components/footer"
 import { Main, Container } from "./style/App.style"
 
 function App() {
   return (
     <Container>
       <BrowserRouter>
+        <ToastContainer />
         <Header />
         <Main>
           <Routes>
@@ -23,7 +25,7 @@ function App() {
           </Routes>
         </Main>
       </BrowserRouter>
-      <ToastContainer />
+      <Footer />
     </Container>
   )
 }
