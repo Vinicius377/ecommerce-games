@@ -39,8 +39,10 @@ function Carrousel() {
             </div>
             <div className="carrousel-infors">
               <h1>{product.name}</h1>
-              <h2>R$ {product.price.toFixed(2)}</h2>
-              <span>Score {product.score}</span>
+              <div className="carrousel-infors_div">
+                <h2>R$ {product.price.toFixed(2)}</h2>
+                <span>Score {product.score}</span>
+              </div>
             </div>
           </div>
         ))}

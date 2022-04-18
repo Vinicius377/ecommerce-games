@@ -14,9 +14,6 @@ export const Container = styled.section`
       border: none;
       outline: none;
       border-radius: 5px;
-      :hover {
-        backdrop-filter: brightness(0.7);
-      }
     }
   }
   @media (max-width: 770px) {
@@ -60,8 +57,16 @@ export const CarrouselContainer = styled.div`
     padding: 10px;
     position: absolute;
     bottom: 0;
+    font-size: 1.4rem;
     width: 100%;
     color: #ffffff;
     background: linear-gradient(transparent, black);
+    -webkit-text-stroke: 0.7px black;
+    h1 {
+      color: black;
+    }
+  }
+  .carrousel-infors_div {
+    margin-left: 10px;
   }
 `

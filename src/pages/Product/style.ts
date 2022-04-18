@@ -54,5 +54,23 @@ export const Container = styled.section`
             border:solid 1px #FF965A;
         }
   }
- 
+ @media(max-width:860px){
+  .infor-container{
+    margin-inline:20px;
+    h1{
+      font-size:1em;
+    }
+  }
+   h2{
+     font-size:1.3rem;
+   }
+ }
+ @media(max-width:630px){
+   {
+     display: block;
+   }
+}
+@media(max-width:720px){
+  
+ }
 `
