@@ -24,7 +24,7 @@ Trata-se de um e-commerce de games, que faz parte desafio tecnico proposto pela 
 - No terminal do editor:
   - Execute o comando `npm install` para baixar todas as dependências do projeto
   - Logo após baixar as dependências, execute `npm start`
-- O projeto irá abir em http://localhost/3000
+- O projeto irá abrir em http://localhost/3000
 
 ## Screenshots
 
